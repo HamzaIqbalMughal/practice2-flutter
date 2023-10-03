@@ -13,19 +13,42 @@ class _Screen1State extends State<Screen1> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Screen1'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.deepPurpleAccent,
       ),
       drawer: Drawer(
-        backgroundColor: Colors.amberAccent,
+        // backgroundColor: Colors.,
         child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             // DrawerHeader(
             //   child: Text('Hamza Iqbal'),
             // ),
             UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.deepPurpleAccent,
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+              ),
               accountName: Text('Hamza Iqbal'),
               accountEmail: Text('humza.iqbal.hi@gmail.com'),
-            )
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Exit'),
+              onTap: () {},
+            ),
           ],
         ),
       ),
