@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});

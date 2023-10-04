@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice2/AnimatedTextScreen.dart';
 import 'package:practice2/screen1.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       title: 'Flutter Demo',
-      home: Screen1(),
+      // home: Screen1(),
+      home: AnimatedTextScreen(),
     );
   }
 }
