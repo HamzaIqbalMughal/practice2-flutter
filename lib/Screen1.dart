@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
+import 'package:badges/badges.dart' as badges;
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -48,6 +50,81 @@ class _Screen1State extends State<Screen1> {
               leading: Icon(Icons.exit_to_app),
               title: Text('Exit'),
               onTap: () {},
+            ),
+          ],
+        ),
+      ),
+      // body: Text(
+      //   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum .',
+      //   maxLines: 3,
+
+      // ),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            ReadMoreText(
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum .',
+              // trimLines: 3,
+              // trimMode: TrimMode.Line,
+              // trimCollapsedText: "Read More",
+              // colorClickableText: Colors.red,
+              // colorClickableText: Colors.blue,
+              trimLines: 2,
+              trimMode: TrimMode.Line,
+              trimCollapsedText: 'Show more',
+              trimExpandedText: 'Show less',
+              moreStyle: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+              lessStyle: TextStyle(color: Colors.teal),
+            ),
+            ReadMoreText(
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum .',
+              // trimLines: 3,
+              // trimMode: TrimMode.Line,
+              // trimCollapsedText: "Read More",
+              // colorClickableText: Colors.red,
+              // colorClickableText: Colors.blue,
+              trimLines: 2,
+              trimMode: TrimMode.Line,
+              trimCollapsedText: 'Show more',
+              trimExpandedText: 'Show less',
+              moreStyle: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+              lessStyle: TextStyle(color: Colors.teal),
+            ),
+            badges.Badge(
+              // badgeContent: Icon(Icons.home),
+              showBadge: true,
+              badgeContent: Text("Messages"),
+              badgeStyle: badges.BadgeStyle(
+                shape: badges.BadgeShape.square,
+              ),
+              badgeAnimation: badges.BadgeAnimation.rotation(
+                animationDuration: Duration(seconds: 3),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            badges.Badge(
+              // badgeContent: Icon(Icons.home),
+              showBadge: true,
+              badgeContent: Text('1'),
+              badgeStyle: badges.BadgeStyle(
+                shape: badges.BadgeShape.circle,
+                // badgeColor: Colors.teal,
+              ),
+              badgeAnimation: badges.BadgeAnimation.slide(
+                animationDuration: Duration(seconds: 3),
+              ),
+              child: Icon(
+                Icons.settings,
+                size: 30,
+              ),
             ),
           ],
         ),
