@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice2/AnimatedTextScreen.dart';
+import 'package:practice2/pincodeScreen.dart';
 import 'package:practice2/screen1.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Flutter Demo',
       // home: Screen1(),
-      home: AnimatedTextScreen(),
+      // home: AnimatedTextScreen(),
+      home: PinCodeScreen(),
     );
   }
 }
